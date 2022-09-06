@@ -1,2 +1,6 @@
 alban xhepi
+<<<<<<< HEAD
+Andi Caka 
+=======
 anteo guigri 
+>>>>>>> e92085c17378fd6ee3eb4d1b527453f5037d7893
