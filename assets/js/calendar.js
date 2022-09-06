@@ -1,3 +1,4 @@
-(function initModal(){
 
-})();
+(function calendar(){
+    console.log("calendar");
+})
