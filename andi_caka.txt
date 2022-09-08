@@ -73,5 +73,5 @@ select * from employees limit 10;
 
 
 19
-select FIRST_NAME as "First Name", SALARY/12 as "Salary" from employees;
+select FIRST_NAME as "First Name", round(SALARY/12,2) as "Salary" from employees;
 
