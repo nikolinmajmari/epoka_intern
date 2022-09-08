@@ -1,2 +1,77 @@
 Andi Caka!
-anteo guri 
+1
+select FIRST_NAME as "First Name", LAST_NAME as "Last Name" from Employees;
+
+
+2
+select DEPARTMENT_ID as "Last Name" from Employees;
+
+
+3
+select * from Employees order by FIRST_NAME desc;
+
+
+4
+select FIRST_NAME, LAST_NAME, SALARY, (SALARY * 0.15) as PF from Employees;
+
+
+5
+select EMPLOYEE_ID,FIRST_NAME, LAST_NAME, SALARY from Employees order by SALARY asc;
+
+
+6
+select sum(SALARY) from employees;
+
+
+7
+select min(SALARY), max(SALARY) from employees;
+
+
+8
+select avg(SALARY), count(EMPLOYEE_ID) from employees;
+
+
+9
+select count(EMPLOYEE_ID) from employees;
+
+
+10
+select count(distinct JOB_ID) as "Jobs avaible" from employees;
+
+
+11
+select upper(FIRST_NAME) as "First Name" from employees;
+
+
+12
+select SUBSTRING(FIRST_NAME,1,3)  as "First Name 3 Characters" from employees;
+
+
+13
+select sum(171*214+265);
+
+
+14
+select concat(FIRST_NAME, " " ,LAST_NAME) as "Full Name" from employees;
+
+
+15
+select trim(FIRST_NAME) as "Trimed First Name" from employees;
+
+
+
+16
+select length(FIRST_NAME) as "Length of First Name", length(LAST_NAME) as "Length of Last Name" from employees;
+
+
+17
+select FIRST_NAME as "IS Numeric" from employees where FIRST_NAME REGEXP '[0-9]';
+
+
+18
+select * from employees limit 10;
+
+
+19
+select FIRST_NAME as "First Name", SALARY/12 as "Salary" from employees;
+
