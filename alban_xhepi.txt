@@ -1,14 +1,11 @@
 alban xhepi
-<<<<<<< HEAD
+
 Andi Caka 
-=======
+
  
 anteo guri 
 
 erdit baxhia
  
-Andi Caka 
- 
 anteo guigri 
  
->>>>>>> a172cfd0f2b009577afda6e7fec03410e034bb23
