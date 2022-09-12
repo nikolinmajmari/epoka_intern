@@ -1,0 +1,115 @@
+body{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#scooter{
+    padding-left: 45px;
+    float: left;
+    text-decoration: none;
+    margin-top: -50px;
+    font-size: 40px;
+    color: black;
+}
+#profile{
+    position:relative; left: 1px; top: 8px;
+}
+#arrow1{
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 270px;
+}
+#arrow2{
+    position: absolute;
+    margin-left: 500px;
+    margin-top: 320px;
+    transform: rotate(180deg);
+
+}
+#scooter_picture{
+    position: absolute;
+    margin-left: 600px;
+    margin-top: -375px;
+}
+#bones{
+    position: absolute;
+    margin-left: 300px;
+    margin-top: 120px;
+}
+#volcom{
+    position: absolute;
+    margin-left: 450px;
+    margin-top: 110px;
+}
+#huf{
+    position: absolute;
+    margin-left: 600px;
+    margin-top: 120px;
+}
+#baker{
+    position: absolute;
+    margin-left: 750px;
+    margin-top: 120px;
+}
+#bones2{
+    position: absolute;
+    margin-left: 850px;
+    margin-top: 120px;
+}
+#paragraf{
+    padding-top: 45px;
+    padding-left: 45px;
+    font-size: 45px;
+}
+#paragraf1{
+    padding-left: 45px;
+    margin-top: 60px;
+    width: 200px;
+    font-weight: bold;
+    color: gray;
+    font-size: 17.5px;
+}
+#paragraf2{
+    padding-left: 45px;
+    font-weight: bold;
+    font-size: 30px;
+    padding-top: 40px;
+}
+
+.outer-container{
+    background-color: rgb(255, 204, 240);
+    padding: 20px 0px;
+}
+.upper-titles>a{
+    position:relative; left: 750px; top 50px;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 24px;
+    color: black;  
+}
+
+.inner-container{
+    background-color: #f5f5f5;
+    margin: 35px 80px 35px 80px;  
+    padding: 55px;
+    padding-bottom: 0px;
+    border-radius: 45px;
+}
+#swirly{
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(120deg);
+    -o-transform: rotate(120deg);
+    -ms-transform: rotate(120deg);
+    position: absolute;
+    margin-left: 220px;
+    margin-top: -115px;
+
+}
+.lower_titles{
+    display: flex;
+    margin-right: 50px;
+    margin-top: 120px;
+}
+.semi, .segway, .low{
+    padding: 90px;
+    text-align: center;
+}
