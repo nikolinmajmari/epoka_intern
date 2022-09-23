@@ -1,6 +1,6 @@
 <?php
 $title = "Welcome to Sign In!";
-require "connection.php";
+require "conf.php";
 include "template.php";
 ?>
 
@@ -11,9 +11,33 @@ include "template.php";
 <?php 
 echo $nav;
 echo $header; 
+$formValues = [];
 
 if(isset($_POST['signin'])){
-    echo "Wow";
+    $username = $_POST['username'];
+    $password = $_POST['password'];
+
+    // Check if user exists
+    $sql = "select * from user where username = '".$username."'";
+    $result = mysqli_query($conn, $sql);
+    $user = mysqli_fetch_assoc($result);
+
+    $errors = [];
+    $formValues['username'] = $username;
+
+    if(!$user){
+        $errors['username'] = true;
+    }
+    else{
+        // check if password is OK
+        if($password != $user['password']){
+            $errors['password'] = true;
+        }else{
+            unset($user['password']);
+            $_SESSION['user'] = $user;
+            header("Location: admin_homepage.php");
+        }
+    }
 }
 
 
@@ -26,12 +50,26 @@ if(isset($_POST['signin'])){
     <form method="POST" class="col-md-6">
     <div class="form-group">
         <label for="username">Username</label>
-        <input type="text" class="form-control" id="username" aria-describedby="usernameHelp" placeholder="Enter username">
-        <small id="usernameHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+        <input 
+            type="text" 
+            class="form-control <?php print (isset($errors['username'])) ? 'is-invalid' : '' ?>" 
+            name="username" 
+            aria-describedby="username_validation" 
+            placeholder="Enter username"
+            value="<?php print (isset($formValues['username'])) ? $formValues['username'] : '' ?>"
+        >
+        <div id="username_validation" class="invalid-feedback">Username not found!</div>
     </div>
     <div class="form-group">
         <label for="password">Password</label>
-        <input type="password" class="form-control" id="password" placeholder="Password">
+        <input 
+            type="password" 
+            class="form-control  <?php print (isset($errors['password'])) ? 'is-invalid' : '' ?>" 
+            name="password" 
+            placeholder="Password" 
+            area_describedby="password_validation"
+        >
+        <div id="password_validation" class="invalid-feedback">Password does not match!</div>
     </div>
     <div class="form-group form-check">
         <input type="checkbox" class="form-check-input" id="remember_me">
