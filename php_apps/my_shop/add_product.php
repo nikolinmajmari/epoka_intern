@@ -2,6 +2,9 @@
 $title = "Add new Product!";
 require "conf.php";
 include "template.php";
+require "authentication.php";
+adminAccess();
+
 ?>
 
 <!DOCTYPE html>
