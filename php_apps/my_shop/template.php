@@ -13,6 +13,11 @@ if(isset($_SESSION['cart'])){
 }else{
     $cartProductNumber = 0;
 }
+
+        include "invoices_list.php";
+        $invoices= $invoices_container;
+
+
         $head = '
             <head>
             <meta charset="utf-8" />
@@ -37,6 +42,7 @@ if(isset($_SESSION['cart'])){
                         <ul class="navbar-nav me-auto mb-2 mb-lg-0 ms-lg-4">
                             <li class="nav-item"><a class="nav-link" href="products.php">Products</a></li>
                             <li class="nav-item"><a class="nav-link" href="add_product.php">Add product</a></li>
+                            <li class="nav-item"><a class="nav-link" href="invoices.php">Show invoice</a></li>
                             '.$sign_in_out_btn.'
                         </ul>
                         <form class="d-flex">
@@ -62,6 +68,10 @@ if(isset($_SESSION['cart'])){
             </header>
             ';
 
+
+
+       
+
         
         $footer = '
             <!-- Footer-->
@@ -75,4 +85,7 @@ if(isset($_SESSION['cart'])){
             ';
         include "products_list.php";
         $section = $products_container;
+
+        
+
     ?>
